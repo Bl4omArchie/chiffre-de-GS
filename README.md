@@ -41,5 +41,5 @@ message = "cipher"
 cipher = ['147321977194146730277214']
 ```
 
-Note: This only some test, nothing is done know !
+Note: This only some test, nothing is done know ! And also in the implementation of my cipher, the key isn't really important know, for the moment i work on the decryption so I didn't define precisely what the key is going to be.
 
