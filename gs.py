@@ -54,5 +54,3 @@ class GS_NUMBER():
 if __name__ == "__main__":
     test = GS_NUMBER(b"cipher")
     print (test.enc_GSnumber())
-
-    #flag: CYPHER{damn_you_have_an_iq_of_135_congrat!}
