@@ -9,7 +9,6 @@ class GS_NUMBER():
     def compute(self, block1, block2):
         return str(block1+block2) + str(block1-block2)
 
-
     def b_block_enc(self, block): 
         block_permut = [] 
         block_cipher = []
@@ -41,7 +40,6 @@ class GS_NUMBER():
 
     def enc_GSnumber(self):
         block = list(self.message)
-        print (block)
         self.key = ""
 
         while True:
