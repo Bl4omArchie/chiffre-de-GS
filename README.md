@@ -1,0 +1,2 @@
+# chiffre-de-GS
+Heureux de vous présenter mon premier chiffrement que j'ai baptisé chiffre de GS. Pour l'instant je n'en suis qu'au début, j'ai déjà codé la fonction d'encryption et je cherche encore un moyen de déchiffrer (lol). N'hésitez pas à me faire parvenir vos retours sur discord ou twitter, vos avis me sont importants pour que je puisse améliorer mon chiffrement et le rendre plus sur. Je tiens à préciser que je fais cela juste pour m'entraîner, je ne compte appliquer ce chiffrement réellement
