@@ -1,6 +1,6 @@
 # Chiffre de GS/ number of GS
 
-In this readme, i'm going to explains you how i get the idea for this cipher.
+In this readme, i'm going to explains you how i get the idea for this cipher and how its work.
 
 For every chipher, you need to respect the confidentiality, authenticity and integrity but mine is just a little one for training so i just thinking about confidentiality.
 I also wanted to make a cipher wich return a ciphertext very small to be very optimize with a small key too.
@@ -29,7 +29,7 @@ cipher = f(list[i], list[i+1])
 e.g: (1+0) + (1-0) = 11
 ```
 
-I decided to make it a little bit more tricky by making this operation until there’s only one place left in my list.
+I decided to make it a little bit more tricky and complexe by making this operation until there’s only one place left in my list.
 
 ```
 message = "cipher"
@@ -40,6 +40,8 @@ message = "cipher"
 ['147026127204', '295849990']
 cipher = ['147321977194146730277214']
 ```
+
+So for now, for decrypting a message, you need to find the last two numbers wich gave the cipher (['147026127204', '295849990'])
 
 Note: This is only some test, nothing is done know ! And also in the implementation of my cipher, the key isn't really important know, for the moment i work on the decryption so I didn't define precisely what the key is going to be.
 
