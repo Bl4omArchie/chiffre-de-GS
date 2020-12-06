@@ -6,7 +6,7 @@ class GS_NUMBER():
         self.message = str(bytes_to_long(message))
         self.l = 0
 
-    def compute(self, block1, block2):
+    def compute(self, block1, block2):  #main calcul for encryption (e.g: (9+4)+(9-4) = 135)
         return str(block1+block2) + str(block1-block2)
 
     def b_block_enc(self, block): 
@@ -17,17 +17,15 @@ class GS_NUMBER():
         if self.l % 2 == 1:
             block.append("0")
             self.l = len(block)
-        
-        print (block)
 
         i = 0
         for y in range(self.l//2):
-            if int(block[i]) < int(block[i+1]):
+            if int(block[i]) < int(block[i+1]): #switching numbers into block_permut
                 block_permut.append(block[i+1])
                 block_permut.append(block[i])
                 block_cipher.append(self.compute(int(block[i+1]), int(block[i])))
                 self.key += "1"
-            else:
+            else:                               #not switching numbers into block_permut
                 block_permut.append(block[i])
                 block_permut.append(block[i+1])
                 block_cipher.append(self.compute(int(block[i]), int(block[i+1])))
@@ -36,7 +34,6 @@ class GS_NUMBER():
 
         self.l = len(block_cipher)
         return block_cipher
-
 
     def enc_GSnumber(self):
         block = list(self.message)
