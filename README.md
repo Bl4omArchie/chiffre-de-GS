@@ -35,14 +35,14 @@ Important: Dans le code vous pouvez voir la présence d'une variable clé qui re
 Pour l'instant ne vous occupez pas de la clé, elle ne sert à rien.
 
 Ensuite, j'ai voulu rendre l'algo un plus complexe en continuant l'opération jusqu'à ce que la taille du block soi egal à 1.
-Be careful, if the len of the block isn't peer, the algorithm wouldn't work, because you can compute an number with nothing 
+Faites attention, si la taille du bloc n'est pas pair, l'algorithme ne marchera pas car on ne peut pas additionner un nombre avec rien !
 (exemple: ['137115', '9911', '19787', '9797'] working
           ['137115', '9911', '19787']         not working)
 
 ```
 message = "cipher"
 ['1', '0', '9', '3', '0', '4', '5', '0', '8', '6', '0', '5', '8', '1', '0']
-['1', '0', '9', '3', '0', '4', '5', '0', '8', '6', '0', '5', '8', '1', '0', '0']    #As you can see, the len of the block isn't peer, so i add a 0.
+['1', '0', '9', '3', '0', '4', '5', '0', '8', '6', '0', '5', '8', '1', '0', '0']    #Comme la taille du bloc n'est pas pair, j'ai ajouté un 0.
 ['11', '126', '44', '55', '142', '55', '97', '00']
 ['137115', '9911', '19787', '9797']
 ['147026127204', '295849990']
@@ -52,8 +52,8 @@ cipher = ['147321977194146730277214']
 So my cipher allow to encrypt any text wich can be convert into integer, the algorithm can encrypt any blocks only if the len is peer, else, the algorithm will add 0 as padding. The outpout of the algorithm have a variable len but I work on it to optimize the size wich can become very big.
 For the moment you can only be sur that the ciphertext cant be read.
 
-For the next upload:
-So for decrypting a message, you need to find the last two numbers wich gave the cipher (['147026127204', '295849990']), then the four numbers wich gave the two numbers before the cipher and you continu until the end to find the message and convert him in bytes.
-I'm actually coding a function wich can do this operation, I will post it soon as possible !
+Pour la prochaine maj:
+Donc pour déchiffrer un message il faut trouver les deux derniers blocs qui donne le ciphertext final (['147026127204', '295849990']), puis les quatres autres blocs qui ont donné ces deux là et ainsi de suite jusqu'à ce que l'on trouve le message original composé d'un seul bloc.
+Je travaille sur cette fonctione qui permettrait de déchiffrer !
 
-If you have some advices or questions, please tell me on discord or twitter !
+Si vous avez des questions ou des conseils, n'hésitez pas à me le faire savoir sur twitter ou discord !
