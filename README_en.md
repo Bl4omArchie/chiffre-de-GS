@@ -1,4 +1,4 @@
-# Chiffre de GS/ number of GS
+Number of GS
 
 In this readme, i'm going to explains you how i get the idea for this cipher and how its work.
 
