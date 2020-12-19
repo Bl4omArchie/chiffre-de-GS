@@ -48,9 +48,8 @@ message = "cipher"
 ['147026127204', '295849990']
 cipher = ['147321977194146730277214']
 ```
-
-So my cipher allow to encrypt any text wich can be convert into integer, the algorithm can encrypt any blocks only if the len is peer, else, the algorithm will add 0 as padding. The outpout of the algorithm have a variable len but I work on it to optimize the size wich can become very big.
-For the moment you can only be sur that the ciphertext cant be read.
+Donc mon cipher permet de chiffrer n'importe quel text qui peut être converti en entier. L'algorithme peut chiffrer n'importe quel bloc à la seule condition que sa taille soie paire sinon l'algorithme ajoute un 0 au bloc. La sortie de l'algorithme a une taille qui est variable mais je travaille dessus pour optimiser le taille car elle peut, en fonction du message, devenir très grande.
+Pour le moment, on ne peut que être sur que le message ne peut être lu.
 
 Pour la prochaine maj:
 Donc pour déchiffrer un message il faut trouver les deux derniers blocs qui donne le ciphertext final (['147026127204', '295849990']), puis les quatres autres blocs qui ont donné ces deux là et ainsi de suite jusqu'à ce que l'on trouve le message original composé d'un seul bloc.
